@@ -57,6 +57,7 @@ type BackendSvr struct {
 }
 
 func (p *BackendSvr) Method1(context.Context, *gwproto.Method1Request) (*gwproto.Method1Reply, error) {
+	logs.Info("backend service 1 process method")
 	return &gwproto.Method1Reply{}, nil
 }
 

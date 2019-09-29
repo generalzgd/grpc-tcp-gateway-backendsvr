@@ -56,12 +56,13 @@ type BackendSvr struct {
 }
 
 func (p *BackendSvr) Method2(context.Context, *gwproto.Method2Request) (*gwproto.Method2Reply, error) {
+	logs.Info("backend service 2 process method")
 	return &gwproto.Method2Reply{}, nil
 }
 
 func registConsul() (*consulapi.Client, *consulapi.AgentServiceRegistration, error) {
 	ip := "127.0.0.1"
-	svrName := "BackendSvr1"
+	svrName := "BackendSvr2"
 	useType := "grpc"
 	reg := &consulapi.AgentServiceRegistration{
 		ID:      strings.ToLower(fmt.Sprintf("%s_%s_%d", svrName, useType, os.Getpid())),
