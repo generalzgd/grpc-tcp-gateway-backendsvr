@@ -3,10 +3,10 @@ module github.com/generalzgd/grpc-tcp-gateway-backendsvr
 go 1.12
 
 require (
-	github.com/astaxie/beego v1.12.0
+	github.com/astaxie/beego v1.12.2
 	github.com/generalzgd/grpc-tcp-gateway-proto v0.0.0-20190924091100-602e21fe9a96
 	github.com/hashicorp/consul/api v1.2.0
-	github.com/shiena/ansicolor v0.0.0-20151119151921-a422bbe96644 // indirect
+	google.golang.org/grpc v1.23.0
 )
 
 replace golang.org/x/sys => github.com/golang/sys v0.0.0-20190712062909-fae7ac547cb7
